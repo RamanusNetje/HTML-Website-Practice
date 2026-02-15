@@ -1,4 +1,4 @@
 # HTML-Website-Practice
-HTML Website practice
+Creating a website using HTML only
 
 Link: https://ramanusnetje.github.io/HTML-Website-Practice/
