@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Asset/fav icon.png" type="image/png">
+    <title>Glitch - Netrunner Profile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #0a0a0f;
+            color: #00ff9f;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        video#bg-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 10, 15, 0.85);
+            z-index: -1;
+        }
+        header {
+            background: linear-gradient(135deg, #1a0a2e 0%, #0f0f1a 100%);
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 2px solid #ff0055;
+            position: relative;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(0, 255, 159, 0.03) 2px,
+                rgba(0, 255, 159, 0.03) 4px
+            );
+            pointer-events: none;
+        }
+        h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: #ff0055;
+            text-shadow: 0 0 10px #ff0055, 0 0 20px #ff0055;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            color: #00d4ff;
+            border-bottom: 1px solid #00d4ff;
+            padding-bottom: 0.5rem;
+            margin-top: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .alias {
+            color: #ffb300;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        nav {
+            margin-top: 1.5rem;
+        }
+        nav a {
+            color: #00ff9f;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid #00ff9f;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            background: #00ff9f;
+            color: #0a0a0f;
+            box-shadow: 0 0 15px #00ff9f;
+        }
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        section {
+            background: rgba(20, 20, 30, 0.8);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 3px solid #ff0055;
+            position: relative;
+        }
+        section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, transparent 50%, rgba(255, 0, 85, 0.1) 50%);
+        }
+        p {
+            margin-bottom: 1rem;
+        }
+        ul, ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        strong {
+            color: #ffb300;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .stat-box {
+            background: rgba(0, 212, 255, 0.1);
+            padding: 1rem;
+            text-align: center;
+            border: 1px solid #00d4ff;
+        }
+        .stat-box span {
+            display: block;
+            font-size: 1.5rem;
+            color: #00d4ff;
+            font-weight: bold;
+        }
+        .skill-tag {
+            display: inline-block;
+            background: rgba(255, 0, 85, 0.2);
+            border: 1px solid #ff0055;
+            padding: 0.3rem 0.8rem;
+            margin: 0.2rem;
+            font-size: 0.9rem;
+        }
+        .quickhack {
+            color: #00ff9f;
+        }
+        .corporate {
+            color: #ff6b6b;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #0a0a0f;
+            border-top: 1px solid #333;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <video id="bg-video" autoplay muted loop playsinline>
+        <source src="Asset/backrgound video.webm" type="video/webm">
+    </video>
+    <div class="overlay"></div>
+
+    <header>
+        <h1>Glitch</h1>
+        <p class="alias">ALEX CHEN // NETRUNNER // DIGITAL GHOST</p>
+        <nav>
+            <a href="hobbies.html">Neural Activities</a> | <a href="contact.html">Secure Channel</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>// OPERATIONAL SUMMARY</h2>
+            <p>Elite netrunner specializing in corporate espionage, data extraction, and black market intel acquisition. Operates primarily in the Watson and Pacifica sectors of Night City. Known for leaving zero digital footprints. Former Arasaka insider - relationship terminated. Currently available for contract work through verified fixers only.</p>
+            <p><strong>Specialization:</strong> Breach Protocol execution, ICE bypass, military-grade quickhacking, neural interface optimization.</p>
+        </section>
+
+        <section>
+            <h2>// NEURAL STATS</h2>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span>18</span>
+                    INTELLIGENCE
+                </div>
+                <div class="stat-box">
+                    <span>15</span>
+                    TECHNICAL
+                </div>
+                <div class="stat-box">
+                    <span>14</span>
+                    COOL
+                </div>
+                <div class="stat-box">
+                    <span>12</span>
+                    REFLEXES
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>// EDUCATION</h2>
+            <ol>
+                <li>
+                    <strong>Night City Technical University</strong><br>
+                    Cybernetics Engineering (Incomplete)<br>
+                    2071 - 2073<br>
+                    <em>Expelled after Arasaka recruitment offer</em>
+                </li>
+                <li>
+                    <strong>Arasaka Corporate Academy</strong><br>
+                    Netrunner Training Program<br>
+                    2073 - 2074<br>
+                    <em>Classified training in neural warfare. Relationship terminated.</em>
+                </li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>// FIELD EXPERIENCE</h2>
+            <ol>
+                <li>
+                    <strong>Independent Contractor</strong><br>
+                    Night City Underworld<br>
+                    2074 - Present<br>
+                    <ul>
+                        <li>Executed 47+ corporate data extraction missions without detection</li>
+                        <li>Successfully breached Arasaka, Militech, and Netwatch secure networks</li>
+                        <li>Established reputation as untraceable "digital ghost"</li>
+                        <li>Developed custom quickhack loadouts for high-value targets</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Arasaka Internal Security</strong><br>
+                    Night City Branch<br>
+                    2073 - 2074<br>
+                    <ul>
+                        <li>Assigned to counter-intelligence netrunning division</li>
+                        <li>Gained access to classified corporate databases</li>
+                        <li>Exfiltrated sensitive data before defection - still active bounty</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Maelstrom Affiliate</strong><br>
+                    Watson Sector<br>
+                    2071 - 2073<br>
+                    <ul>
+                        <li>Provided neural interface support for gang operations</li>
+                        <li>Bypassed security for chromed-outraider missions</li>
+                        <li>Disavowed affiliation after violent incident - clean break</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>// ACTIVE QUICKHACKS</h2>
+            <ul>
+                <li><span class="quickhack">Synapse Burnout</span> - Neural damage, instant stagger</li>
+                <li><span class="quickhack">Overheat</span> - Thermal cascade, weapon malfunction</li>
+                <li><span class="quickhack">Contagion</span> - Viral spread to nearby targets</li>
+                <li><span class="quickhack">System Reset</span> - Complete neural shutdown</li>
+                <li><span class="quickhack">Short Circuit</span> - Cyberware disruption</li>
+                <li><span class="quickhack">Memory Wipe</span> - Target amnesia protocol</li>
+                <li><span class="quickhack">Cyberware Malfunction</span> - Implant failure诱导</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>// INSTALLED CYBERWARE</h2>
+            <ul>
+                <li><strong>Cyberdeck:</strong> Tetratronic Rippler MK.4 (RAM: 14, Uptime: 18s)</li>
+                <li><strong>Operating System:</strong> Militech "Maramar" Grey Matter</li>
+                <li><strong>Sandevistan:</strong> Mk.5 "Cicada" - Phantom Liberty variant</li>
+                <li><strong>Optical Implants:</strong> Kiroshi "Cockatrice" Mark III</li>
+                <li><strong>Mantis Blades:</strong> Legendary "Claws of the Panther"</li>
+                <li><strong>Internal:</strong> Synaptic Accelerator, Biomonitor, Kerenzikov</li>
+                <li><strong>Frontal Cortex:</strong> Ex-Disk, Micro Rotors, Dense Marrow</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>// SKILL PROGRESSION</h2>
+            <div>
+                <span class="skill-tag">Quickhacking</span>
+                <span class="skill-tag">Breach Protocol</span>
+                <span class="skill-tag">Stealth</span>
+                <span class="skill-tag">Intelligence</span>
+                <span class="skill-tag">Crafting</span>
+                <span class="skill-tag">Annihilation</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>// NOTABLE OPERATIONS</h2>
+            <ul>
+                <li><strong>The Arasaka Extraction:</strong> Pulled 2TB of corporate secrets from Mikoshi-accessible terminal. Bounty issued - active.</li>
+                <li><strong>Militech Contract:</strong> Disrupted Voodoo Boys network operations in Pacifica. Payment: 50,000€</li>
+                <li><strong>Netwatch Infiltration:</strong> Accessed classified ICE protocols. Still under investigation.</li>
+                <li><strong>Heywood Valentinos Job:</strong> Secured gang intel for corpo client. Zero casualties.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>// REPUTATION STATUS</h2>
+            <p><span class="corporate">CORPOS:</span> Wanted (Arasaka) - Bounty: 250,000€</p>
+            <p><span class="corporate">GANGS:</span> Maelstrom - Hostile | Voodoo Boys - Neutral | Valentinos - Friendly</p>
+            <p><span class="corporate">NETWATCH:</span> Under Surveillance</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>// NIGHT CITY SURVIVOR // 2077 // ALL RIGHTS RESERVED //</p>
+        <p>"The net is forever. I'm just passing through."</p>
+    </footer>
+</body>
+</html>
