@@ -8,7 +8,7 @@ The goal of this project was to strengthen my understanding of core HTML concept
 - **Content organization** - Designed a fictional character CV with clear sections such as profile, experience, and attributes.
 - **Static site deployment** - Published the website using GitHub Pages, demonstrating basic Git and repository management skills.
 ## 🌐 Live Demo
-https://ramanusnejke.github.io/HTML-Website-Practice/
+https://ramanusnetje.github.io/HTML-Website-Practice/
 ## Project Structure
 ```
 HTML-Website-Practice/
